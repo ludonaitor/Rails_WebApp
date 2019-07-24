@@ -76,6 +76,13 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+#HEROKU
+
+group :production do
+    gem 'pg'
+    gem 'rails_12factor'
+end
+
 
 #Adding Gems Test
 group :test do
