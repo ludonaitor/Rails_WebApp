@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
@@ -13,6 +15,22 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+
+gem 'bootstrap-sass',       '~> 3.2.0.0'
+
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'rails-ujs', '~> 0.1.0'
+
+gem 'devise'
+#sign-up,sign-in and authentication gem
+
+gem 'canard', '~> 0.5.0.pre'
+#roles task
+
+gem 'haml'
+#we ll use haml template
+
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
@@ -58,9 +76,14 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do
-  gem 'pg', '0.17.1'
-  gem 'rails_12factor', '0.0.2'
+
+#Adding Gems Test
+group :test do
+      gem 'minitest-reporters', '1.0.5'
+      gem 'mini_backtrace',     '0.1.3'
+      gem 'guard-minitest',     '2.3.1'
 end
+
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
